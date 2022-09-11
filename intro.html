@@ -1,0 +1,21 @@
+<html>
+    <body>
+      <h1>what can javascript do?</h1>
+      <p id="p1">
+          javascript can change content of the page.
+      </p>
+      <button onclick="document.getElementById('p1').innerHTML='Hello javascript'">click me</button>
+       
+      <hr>
+
+      <p id="p2">javascript can hide the content.</p>
+      <button onclick="document.getElementById('p2').style.display='none'">click to hide the content</button>
+       
+      <hr>
+
+      <button onclick="document.getElementById('icolor').src='blue.png'">turn blue</button>
+      <img src="green.png" id="icolor">
+      <button onclick="document.getElementById('icolor').src='green.png'">turn green</button>
+
+    </body>
+</html>

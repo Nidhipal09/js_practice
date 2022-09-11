@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <button onclick="myfunc1()">sort alphabetically</button>
+    <button onclick="myfunc2()">sort numerically</button>
+    <p id="p1"></p>
+    <p id="p2"></p>
+</body>
+<script>
+    let nums=[3,67,1,9,65,31];
+    document.getElementById("p1").innerHTML=nums;
+    let len=nums.length;
+    let max=-Infinity;
+    while(len>0){
+         if(nums[len]>max) max=nums[len];
+         len--;
+    }
+    document.getElementById("p2").innerHTML=max+" , "+Math.min.apply(null,nums);
+    
+    
+    function myfunc1(){
+        nums.sort();
+        document.getElementById("p1").innerHTML=nums;
+     }
+     function myfunc2(){
+         nums.sort(function(a,b){return a-b});
+         document.getElementById("p1").innerHTML=nums;
+         
+     }
+</script>
+</html>
